@@ -1,0 +1,62 @@
+# HgrmMediaPlayerApp per-model feature table: 55 (key, bool) pairs built by the static initializer at
+# vaddr/file offset 0x7e3d8-0x7e5a6 (stock ZX300 2.02 and A50 1.02, same addresses), inserted into the
+# QMap<int,bool> at [Feature object + 0x18]. Each value is one "strb.w rX, [sp, #0x54 + 8*key]";
+# on ZX300 r2 = 0 and r3 = 1, on A50 r1 = 0 and r3 = 1. "getter" = the method that reads the key.
+# name/readers: from Q_PROPERTY wrappers and from __FILE__ strings near the callers (partial).
+# The table is also read directly, without the getters, by 0x151874(key): creators use it with keys 0, 1, 2, 32, 36, 43.
+key	zx300	a50	getter	name_or_readers
+0	0	1	0x1de8a0	FM radio (isAvailableFmRadio = flag && region field != 3)
+1	0	1	0x1de904	Recorder (isAvailableRecorder = flag && region field == 0)
+2	0	1	0x1de9c4	Language Study (isAvailableLangStudy / hasFeatureLanguageStudy); also read straight from the table by 0x151874 for the screen creator (0x309aac). Table entry patched to 1 at file offset 0x7e3f1
+3	1	1	0x1dea38	DAC mode
+4	0	0	-	
+5	0	0	0x1deaac	
+6	0	1	0x1dec40	
+7	0	1	0x1decb4	
+8	0	0	0x1ded28	
+9	1	1	0x1dfa30	(combined getters) PlayerViewModelBase
+10	0	1	0x1deeb4	DemoMode, PageIndicator, SourceDirectOrClearAudioComp, SettingTop (ClearAudio+ ?)
+11	1	0	0x1def28	DemoMode, PageIndicator, SourceDirectOrClearAudioComp (Source Direct ?)
+12	1	0	0x1def9c	MusicPlayerViewModelBase, DACViewModel, BtReceiverViewModel, SensMePlayerViewModel
+13	1	0	0x1df010	PageIndicatorVisibleConditionManager, PageIndicatorComponent
+14	0	1	0x1df0f8	PageIndicatorVisibleConditionManager, PageIndicatorComponent
+15	1	0	0x1df084	PageIndicatorVisibleConditionManager, PageIndicatorComponent
+16	0	1	0x1df16c	PageIndicator*, ShuffleModeHelper
+17	1	1	0x1df1e0	PageIndicator*, ShuffleModeHelper
+18	1	0	0x1df254	
+19	1	0	-	
+20	1	0	0x1df2c8	
+21	0	1	0x1df33c	
+22	1	1	0x1df3b0	PageIndicator*, ShuffleModeHelper
+23	0	0	0x1df458	
+24	1	0	-	
+25	1	0	0x1df5ac	DemoMode
+26	0	1	0x1df620	
+27	1	0	0x1df694	MusicPlayerViewModelBase
+28	1	0	0x1df708	MusicPlayerViewModelBase
+29	0	0	0x1df7f0	
+30	1	0	0x1df864	InitialSettingWizard
+31	1	0	0x1df8d8	
+32	0	0	0x1dfee8	
+33	1	0	0x1dfb48	
+34	1	1	0x1e03a8	Language (UI language selection)
+35	1	1	0x1deb20	
+36	1	1	0x1dfbbc	MusicPlayerViewModelBase
+37	1	1	-	
+38	1	1	0x1dfc30	
+39	1	1	0x1dfca4	
+40	1	1	0x1dfd18	
+41	1	1	0x1dfd8c	
+42	1	1	0x1dfe00	OperationSoundPlayer
+43	0	0	-	
+44	0	0	0x1dfe74	SystemResumeImpl, AppSystemStateManager
+45	0	0	0x1dff5c	SystemResumeImpl, SoundEffectImpl, DACViewModel
+46	0	1	0x1e0044	MusicPlayerViewModelBase
+47	1	1	0x1dffd0	
+48	0	0	0x1e00b8	SensMePlayer
+49	1	0	0x1df77c	MusicPlayerViewModelBase
+50	1	1	0x1e012c	
+51	0	0	0x1e01a0	AutoSleepTimerAction
+52	1	0	0x1e0214	(combined getter)
+53	0	0	0x1e0300	
+54	0	0	0x1df4cc	(combined getter)

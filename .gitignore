@@ -1,0 +1,7 @@
+# Everything the build makes or downloads. build/ holds Sony's updater and files taken from
+# it: never commit it.
+/build/
+/tools/upgtool-mac/build/
+/tools/upgtool-mac/upgtool
+__pycache__/
+.DS_Store
