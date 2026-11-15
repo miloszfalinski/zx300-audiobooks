@@ -129,8 +129,8 @@ audio and all other tags are copied byte for byte. With `jpegtran` installed
 Without it the tool uses macOS's `sips`, which encodes the picture again. A file whose cover
 is already baseline is copied unchanged.
 
-Write the new file to a folder on the computer and copy it to the player afterwards.
-Writing straight to the SD card failed on the test setup.
+Like the header tool, it never overwrites an existing file. Write the new file to a folder
+on the computer, then copy it to the player in place of the old one.
 
 ## The time headers: run the tool before copying
 
